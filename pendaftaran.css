@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+   
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #02ad09;
+   
+}
+
+.kotak {
+    
+    margin-top: 20px;
+    margin: 20px auto;
+    background-color: white;
+    width: 367px;
+    height: 550px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
+    border-radius: 35px;
+  }
+
+  .c_silahkan-masuk-text {
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  .c_silahkan-masuk-text1 {
+    color: #02ad09;
+    font-size: 28px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;   
+  }
+
+  .login img {
+    display: grid;
+    justify-content:center;
+    transform: translateY(-10px);
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+  .login {
+    margin: 20px;
+    
+  }
+  
+  input[type=text],
+  input[type=password]{
+      width: 100%;
+      padding: 8px 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      
+  }
+
+
+.tombol {
+    padding: 20px;
+  margin-left: 100px;
+}
+.tombol button {
+    background-color: #013dac;
+    border: none;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+   
+}
+
+.tombol button:hover{
+    opacity: 0.8;
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  
+}
+
+.google {
+  width: 320px;
+  border-radius: 10px;
+}
+
+.Apple {
+  width: 320px;
+  border-radius: 10px;
+}
+
+.Fb {
+  width: 320px;
+  border-radius: 10px;
+}
