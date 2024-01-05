@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+    <link rel="stylesheet" href="daftar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="kotak">
+            <div class="c_silahkan-masuk-text">
+                <p class="c_silahkan-masuk-text1">Silahkan Mendaftar</p>
+            </div>
+            <!-- Form -->
+            <form onsubmit="simpanDataPendaftaran(event)">
+                <div class="login">
+                    <div class="profil-logo" id="profilLogo"></div>
+                    <div class="input-nama">
+                        <label for="nama">Email Anda :</label>
+                        <input type="text" placeholder="masukkan Email Anda" name="username">
+                        <label for="Password">Password :</label>
+                        <input type="password" placeholder="Masukkan password" name="password">
+                        <label for="Password">Ulangi Password :</label>
+                        <input type="password" placeholder="Masukkan password" name="passwordRepeat">
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function simpanDataPendaftaran(event) {
+            event.preventDefault();
+            var usernameInput = document.querySelector('input[name="username"]');
+            var passwordInput = document.querySelector('input[name="password"]');
+            var passwordRepeatInput = document.querySelector('input[name="passwordRepeat"]');
+            var profilLogo = document.getElementById('profilLogo');
+
+            var username = usernameInput.value;
+            var password = passwordInput.value;
+            var passwordRepeat = passwordRepeatInput.value;
+
+            // Validasi bahwa username harus menggunakan domain @gmail.com
+            if (!username.endsWith('@gmail.com')) {
+                alert('Username harus menggunakan domain @gmail.com');
+                return;
+            }
+
+            // Validasi bahwa password dan ulangi password sesuai
+            if (password !== passwordRepeat) {
+                alert('Password dan Ulangi Password tidak sesuai');
+                return;
+            }
+
+            // Memeriksa apakah pengguna sudah terdaftar
+            if (isUserRegistered(username)) {
+                alert('Email ini sudah terdaftar. Silakan login.');
+                return;
+            }
+
+            // Menyimpan data pendaftaran ke localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            // Mengambil huruf pertama dari username dan menampilkan sebagai avatar
+            var firstLetter = username.charAt(0).toUpperCase();
+            profilLogo.textContent = firstLetter;
+
+            // Mengirimkan data ke halaman login dengan URL parameter
+            window.location.href = 'login.html?username=' + encodeURIComponent(username);
+        }
+
+        // Fungsi untuk memeriksa apakah pengguna sudah terdaftar
+        function isUserRegistered(username) {
+            var existingUsername = localStorage.getItem('username');
+            return existingUsername === username;
+        }
+    </script>
+</body>
+</html>

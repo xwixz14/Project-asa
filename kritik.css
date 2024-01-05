@@ -1,0 +1,116 @@
+* {
+   
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(214, 214, 214);
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+.kotak {
+    width: 355px;
+    height: 600px;
+    background: rgb(214, 214, 214);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 8px #ffffff;
+  }
+
+  .c_silahkan-masuk-text {
+    text-align: center;
+    padding: 20px;
+
+  }
+  
+  .c_silahkan-masuk-text1 {
+    color: #02ad09;
+    font-size: 28px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    
+   
+  }
+
+  input[type=text]{
+    border-radius: 10px;
+      width: 100%;
+      padding: 15px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border: 1px solid #333;
+    }
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.text label {
+    padding: 3px;
+}
+
+.text textarea {
+    border-radius: 10px;
+    height: auto;
+    width: 300px;
+    outline: none;
+    border: 1px solid #333;
+    background: white;
+    padding: 10px;
+    resize: none;
+}
+.text label{
+      margin: 10px 0;
+  }
+
+.bintang input {
+    display: none;
+}
+
+
+.bintang label {
+    margin-right: 15px;
+    font-size: 30px;
+    color :#444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.bintang input:not(:checked) ~ label:hover,
+.bintang input:not(:checked) ~ label:hover ~ label {
+    color:#fd4;
+}
+.bintang input:checked ~ label {
+    color:#fd4;
+}
+.bintang input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 10px #952;
+}
+
+.tombol {
+  padding: 50px; 
+  margin-top: 50px;
+
+  }
+  .tombol button  {
+      border-radius: 5px;
+      background-color: #013dac;
+      color: rgb(255, 255, 255);
+      margin: 10px 0;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
+     
+  }

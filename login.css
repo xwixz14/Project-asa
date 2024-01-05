@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    
+   
+}
+
+body {
+  width: 100%;
+  background: rgb(214, 214, 214);
+}
+
+
+.header {
+  margin-top: 20px;
+}
+
+.header p {
+  text-align: center;
+  font-size: 40px;
+  color:black;
+  text-shadow: 2px 2px 2px #b6a9a9, -2px -2px 2px #ffffff;
+  
+}
+
+.kotak {
+  width: 320px;
+  height: 370px;
+  background: rgb(214, 214, 214);
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 8px #ffffff;
+  }
+
+  .c_silahkan-masuk-text {
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  .c_silahkan-masuk-text1 {
+    color: #02ad09;
+    font-size: 28px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    
+   
+  }
+
+  .login {
+    margin: 40px;
+    
+  }
+
+
+  input[type=text],
+  input[type=password]{
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      padding: 8px 5px;
+      margin: 10px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  }
+
+
+.tombol {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.tombol button  {
+    background-color: #013dac;
+    border: none;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+   
+}
+.tombol a {
+    background-color: #013dac;
+    border: none;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+   
+}
+
+.tombol a:hover{
+    opacity: 0.8;
+}

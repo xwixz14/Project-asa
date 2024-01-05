@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="profil.css">
+    <script src="https://kit.fontawesome.com/1fa167abe8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div class="kotak">
+            <div class="poto" id="profilLogo"></div>
+            <div class="teks">
+                <p id="namaPengguna"></p>
+            </div>
+        </div>
+
+        <div class="kotak2">
+            <div class="teks2">
+                <p>Siap melayani anda setulus hati</p>
+                <p>Nikmati layanan kami</p>
+            </div>
+
+            <div class="icon">
+                <a href="kiritik.php"><div class="icon1">
+                    <i class="fa-solid fa-comment fa-2x"></i>
+                    <p>Kritik Dan Saran</p></a>
+                </div>
+
+                <div class="icon2">
+                    <a href="database.php"><i class="fa-solid fa-star fa-2x"></i>
+                    <p>Rating</p></a>
+                </div>
+
+                <div class="icon3">
+                    <a href="tampilan.html" onclick="konfirmasiKeluar(event)">
+                        <i class="fa-solid fa-arrow-right fa-2x"></i>
+                        <p>Keluar</p>
+                    </a>
+                </div>
+            </div>
+        
+
+
+    <script>
+        function konfirmasiKeluar(event) {
+            var konfirmasi = confirm("Apakah kamu ingin keluar dari situs ini?");
+            if (!konfirmasi) {
+                event.preventDefault();
+            }
+        }
+
+        // Mengambil dan menampilkan nama pengguna dari URL parameter
+        var namaPenggunaElement = document.getElementById('namaPengguna');
+        var profilLogo = document.getElementById('profilLogo');
+        var urlParams = new URLSearchParams(window.location.search);
+        var username = urlParams.get('username');
+        if (username) {
+            namaPenggunaElement.textContent = username;
+
+            // Mengambil huruf pertama dari username dan menampilkannya sebagai avatar
+            var firstLetter = username.charAt(0).toUpperCase();
+            profilLogo.textContent = firstLetter;
+        }
+    </script>
+</body>
+</html>

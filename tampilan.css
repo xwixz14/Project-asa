@@ -1,0 +1,427 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Bebas Neue', sans-serif;
+    
+}
+
+/* Navigation */
+.Navbar-Menu{
+    width: 100%;
+    height: 100vh;
+    background-image: url('asset/toko.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+.menu{
+    
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 10px;
+    background: whitesmoke;
+    box-shadow: 1px 1px 1px #b5b2b2, -1px -1px 1px #e8dede;
+    position:fixed;
+}
+
+
+
+.leftside{
+    /* width: 10%; */
+    height: 80px;
+    position: relative;
+    float: left;     
+}
+
+.leftside img{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top:-20px;
+    left: 30px;
+}
+
+.rightside{
+   
+    width: auto;
+    height: 80px;
+    float: right;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    justify-content: right;
+    
+}
+.rightside a{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.9);
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+.navicon:hover{
+    color:#7c4a21
+}
+.social{
+    display: inline;
+}
+.menubar{
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    opacity: 0;
+}
+.menubar .line{
+    height: 2px;
+    width: 50px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+#cross{
+    font-size: 23px;
+   color: #fff;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    opacity: 0;
+}
+
+#Border{
+    padding: 13px 0;
+    display: inline;
+    border-right: 1px solid #c37a3e;
+    margin: 0 30px;
+}
+.rightside i{
+    font-size: 18px;
+}
+
+/* Header */
+.heading{
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+    text-align:right;
+}
+.heading h2{
+    font-size: 50px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.2);
+}
+.heading p{
+    font-size: 14px;
+    padding-bottom: 25px;
+    color: whitesmoke;
+}
+.heading a{
+    padding: 15px 30px;
+    background-color: #c37a3e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.heading a:hover{
+    background-color: #7c4a21;
+}
+.heading i{
+    font-size: 18px;
+    margin-right: 10px;
+    animation: 25s change linear infinite;
+    transition: 0.5s;
+}
+.Scroll-Arrow a i{
+    font-size: 25px;
+    color: #7c4a21;
+    padding: 10px 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    transition: 0.5s;
+    z-index: 1000;
+    background-color: transparent;
+    border: 2px solid #7c4a21;
+    background-color: rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+@keyframes change{
+    0%{
+        color: #c37a3e;
+    }
+    20%{
+        color: purple;
+    }
+    40%{
+        color: yellow;
+    }
+    60%{
+        color: teal;
+    }
+    80%{
+        color: #fff;
+    }
+    100%{
+        color: #000;
+    }
+}
+
+
+/* gallery */
+
+.G{
+    width: 100%;
+    height: auto;
+    padding: 100px 0 0 0;
+    text-align: center;
+    margin: 0;
+}
+#Gallery h4 {
+    font-size: 40px;
+}
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 300px;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+ 
+
+/* Feedback */
+.Feedback{
+    width: 100%;
+    height: auto;
+    padding: 100px 0 0 0;
+    text-align: center;
+    margin: 0;
+}
+.Feedback h1{
+    font-size: 35px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #c37a3e;
+    display: inline-block;
+} 
+.Feedback p{
+    font-size: 18px;
+    color: rgba(0,0,0,0.6);
+    padding-bottom: 25px;
+}
+i {
+    color:#fd4;
+}
+
+.rating-container {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.ulasan {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #888;
+}
+.feedback-background{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(asset/toko1.jpg);
+    background-attachment: fixed;
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.center-heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.center-heading p{
+    font-size: 30px;
+    color: #fff;
+}
+.center-heading a{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    transition: 0.5s;
+    background-color: #c37a3e;
+}
+.center-heading a:hover{
+    background-color: #7c4a21;
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.1);
+    padding: 100px 0  0 0;
+    text-align: center;
+}
+.footer h3{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c37a3e;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.footer p{
+    font-size: 15px;
+    color: rgba(0,0,0,0.5);
+    font-weight: lighter;
+    padding: 0 10px;
+}
+.footer i{
+    padding: 10px;
+    font-size: 22px;
+    color: rgba(0,0,0,0.8);
+    transition: 0.6s;
+}
+.footer i:hover{
+    color: #7c4a21;
+}
+
+.Copyright h4{
+    font-size: 18px;
+    line-height: 100px;
+}
+#Name{
+    color: rgba(0,0,0,0.8);
+    font-weight: bold;
+}
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #c37a3e;
+    font-weight: bold;
+}
+
+/* media */
+@media(max-width:900px){
+    .social{
+        display: none;
+    }
+
+
+}
+
+@media(max-width:700px){
+    .Icons a{
+        display: block;
+        text-align: center;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .rightside{
+        width: 100%;
+        height: auto;
+        background-color: rgba(0,0,0,0.9);
+        position: absolute;
+        top: -500px;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        z-index: 500;
+        overflow: hidden;
+    }
+    .rightside a{
+        color: #fff;
+        
+    }
+    .menubar{
+        opacity: 1;
+        top:25px
+    }
+    #cross{
+        opacity: 1;
+    }
+    .heading{
+        width: 100%;
+        position: absolute;
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    .heading h2{
+        font-size: 45px;
+        color: #fff;
+        background-color: rgba(0,0,0,0.2);
+    }
+    .heading p{
+        font-size: 14px;
+        padding-bottom: 10px;
+        color: whitesmoke;
+    }
+    .heading a{
+        padding: 12px 20px;
+        background-color: #c37a3e;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    .center-heading p{
+        font-size: 20px;
+    }
+    .center-heading a{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .footer h3 {
+        display: block;
+       font-size: 40px;
+    }
+}

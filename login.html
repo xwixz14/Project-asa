@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <p>Selamat Datang Di Website</p>
+        <p>rumah Makan bebek goreng Mas Bagus Wae</p>
+    </div>
+    
+    <div class="kotak">
+        <div class="c_silahkan-masuk-text">
+            <p class="c_silahkan-masuk-text1">Silahkan Masuk</p>
+        </div>
+
+        <form onsubmit="simpanNamaPengguna(event)">
+            <div class="login">
+                <div class="profil-logo" id="profilLogo"></div>
+                <div class="input-nama">
+                    <label for="nama">Email Anda :</label>
+                    <input type="text" placeholder="Masukkan Email Anda" name="username" id="username">
+                    <label for="Password">Password :</label>
+                    <input type="password" placeholder="Masukkan password" name="password">
+                </div>
+                <div class="tombol">
+                    <button type="submit">Login</button>
+                    <a href="daftar.html">Daftar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function simpanNamaPengguna(event) {
+            event.preventDefault();
+            var usernameInput = document.getElementById('username');
+            var passwordInput = document.querySelector('input[name="password"]');
+            var profilLogo = document.getElementById('profilLogo');
+
+            var username = usernameInput.value;
+            var password = passwordInput.value;
+
+            // Pengecekan apakah data pengguna sudah tersimpan di localStorage
+            var savedPassword = localStorage.getItem('password');
+            var savedUsername = localStorage.getItem('username');
+
+            if (!savedPassword || savedUsername !== username) {
+                alert('Anda belum mendaftar atau username/password tidak sesuai. Silakan daftar terlebih dahulu.');
+                return;
+            }
+
+            // Validasi bahwa password tidak boleh kosong
+            if (password === '') {
+                alert('Password tidak boleh kosong');
+                return;
+            }
+
+            // Validasi bahwa password sesuai dengan yang diinput pada saat pendaftaran
+            if (savedPassword !== password) {
+                alert('Password yang dimasukkan tidak sesuai');
+                return;
+            }
+
+            // Mengambil huruf pertama dari username
+            var firstLetter = username.charAt(0).toUpperCase();
+
+            // Menampilkan logo profil dengan huruf pertama username
+            profilLogo.textContent = firstLetter;
+
+            // Mengirimkan data ke halaman profil dengan URL parameter
+            window.location.href = 'profil.html?username=' + encodeURIComponent(username);
+        }
+    </script>
+</body>
+</html>
